@@ -16,36 +16,40 @@
 </head>
 
 <body>
-  <div class="jumbotron">
-    <h1 class="text-center">Train Timings</h1>
-  </div>
-  <div class="container">
+  <div class="header">
 
-    <div class="card text-center" style=" margin:5px">
-      <div class="card-header text-left">
-        <h5>Current Train Schedule</h5>
-      </div>
-      <div class="card-body">
-        <div class="table" id="train-timings">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Train Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency(min)</th>
-                <th scope="col">Next Arrival</th>
-                <th scope="col">Minutes Away</th>
-                <th scope="col">Update</th>
-                <th scope="col">Delete</th>
-              </tr>
-            </thead>
-            <tbody id="display-train-details">
-            </tbody>
-          </table>
+    <h1 class="text-center">Train Timings</h1>
+  
+        
+  <div>
+  <div class="row m-1" id="table-display">
+    <div class="col-8">
+      <div class="card text-center" style=" margin:5px">
+        <div class="card-header text-left">
+          <h5 class="">Current Train Schedule</h5>
+        </div>
+        <div class="card-body">
+          <div class="table" id="train-timings">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency(min)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                  <th scope="col">Update</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody id="display-train-details">
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-    
+    <div class="col-4 ">
       <div class="card text-center" style=" margin:5px">
         <div class="card-header text-left">
           <h5> Add Train</h5>
@@ -55,31 +59,40 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Train Name</span>
             </div>
-            <input id="input-train-name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input id="input-train-name" type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Destination</span>
             </div>
-            <input  id="input-train-destination" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input id="input-train-destination" type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-sm">First Train Time(HH:mm - military time)</span>
+              <span class="input-group-text" id="inputGroup-sizing-sm">First Train Time<br/>(HH:mm - military time)</span>
             </div>
-            <input id="input-first-train" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input id="input-first-train" type="text" value="" class="form-control without_ampm" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Frequency (min)</span>
             </div>
-            <input id="input-frequency" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input id="input-frequency" type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm">
           </div>
-          <a href="#" id="btn-submit" class="btn btn-primary">Submit</a>
+          <a href="#" id="btn-submit" class=" btn-secondary btn-lg btn-block">Submit</a>
         </div>
       </div>
-
     </div>
+
+
+
+
+
+  </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>

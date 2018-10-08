@@ -24,7 +24,7 @@ $(document).ready(function () {
       var frequencyfromFB = childSnapshot.val().frequency;
       var keyinFB = childSnapshot.key;
 
-      var trTag = $("<tr>");
+      var trTag = $("<tr class='train-row'>");
       var tdTagTrainName = $("<td class='td-trainname'>");
       var tdTagDestination = $("<td>").attr("scope", "col");
       var tdTagFrequency = $("<td>").attr("scope", "col");
@@ -91,6 +91,9 @@ $(document).ready(function () {
     trainNameforFB = $("#input-train-name").val();
     destinationforFB = $("#input-train-destination").val();
     firstTraintimeforFB = $("#input-first-train").val();
+    
+    console.log($("#input-first-train"));
+   // console.log(firstTraintimeforFB);
     frequencyforFB = $("#input-frequency").val();
 
     // console.log(trainNameforFB, destinationforFB, firstTraintimeforFB, frequencyforFB);
@@ -102,7 +105,7 @@ $(document).ready(function () {
       frequency: frequencyforFB
     };
 
-    //database.ref().push(train);
+    database.ref().push(train);
     // fillTablewithTrainDetails();
 
   });
@@ -123,30 +126,7 @@ $(document).ready(function () {
   //When update clicked this will update the info on firebase
   $(document).on("click", "#train-update", function (event) {
 
-    var keyinFB="";
-    var trTag = $("<tr>");
-    var tdTagTrainName = $("<td class='td-trainname'>");
-    var tdTagDestination = $("<td>").attr("scope", "col");
-    var tdTagFrequency = $("<td>").attr("scope", "col");
-    var tdTagUpdate = $("<td> <img src='images/update.png' id='train-update' value = '" + keyinFB + "' >").attr("scope", "col");
-    var tdTagDelete = $("<td> <img src='images/delete.png' id='train-delete' value = '" + keyinFB + "' >").attr("scope", "col");
-    var textFortrainName = $("<input id='update-trainname' type = 'text'>");
-    var textFordestination = $("<input id='update-destination' type = 'text'>");
-    var textForfrequency = $("<input id='update-frequency' type = 'text'>");
-
-   tdTagTrainName.html(textFortrainName);
-   tdTagDestination.html(textFordestination);
-   tdTagFrequency.html(textForfrequency);
-    trTag.append(tdTagTrainName,tdTagDestination,tdTagFrequency);
-    $(this).parent().append(trTag);
-
-    var keytoUpdate = $(this).attr("value");
-    var updates = {};
-
-
-    // updates['/trainName/' + keytoUpdate] = postData;
-    // updates['/destination/' + keytoUpdate] = postData;
-
+    
 
 
 
