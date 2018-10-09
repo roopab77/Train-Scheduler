@@ -1,0 +1,8 @@
+This project will let you add a train, its destination, frequency and First train time and add it to firebase.
+From firebase all the trains in the database will be displayed on the html page in a table
+The trains next arrival time and the minutes train is away are calculated and shown in the table
+This is the link to the project
+https://roopab77.github.io/Train-Scheduler/#
+
+Also update and delete options are available for the user to update or delete any train. On update the firebase is updated the changed info. Also on delete 
+the information is deleted on firebase.
